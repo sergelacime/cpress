@@ -2,11 +2,14 @@
 
 Application desktop **open source** de compression de fichiers, entièrement locale — vos données ne quittent jamais votre machine.
 
+**Site web :** [sergelacime.github.io/cpress/docs/](https://sergelacime.github.io/cpress/docs/)
+
 Développée avec **Tauri 2**, **React** et **Rust** par [sergelacime](https://github.com/sergelacime).
 
 ![Licence MIT](https://img.shields.io/badge/licence-MIT-blue.svg)
 ![Tauri 2](https://img.shields.io/badge/Tauri-2-blue)
 ![Rust](https://img.shields.io/badge/Rust-edition%202021-orange)
+![Site](https://img.shields.io/badge/site-GitHub%20Pages-7c9cff)
 
 ---
 
@@ -41,18 +44,11 @@ Les fichiers compressés sont créés **à côté de l'original** avec le suffix
 
 ---
 
-## Site web (GitHub Pages)
+## Site web
 
-Une page de présentation est disponible dans le dossier [`docs/`](docs/index.html).
+Page de présentation en ligne : **[https://sergelacime.github.io/cpress/docs/](https://sergelacime.github.io/cpress/docs/)**
 
-Pour l'activer sur GitHub :
-
-1. **Settings** → **Pages**
-2. **Source** : *Deploy from a branch*
-3. **Branch** : `main` (ou `master`) → dossier **`/docs`**
-4. Enregistrer — le site sera accessible à `https://sergelacime.github.io/cpress/`
-
-Le fichier `docs/.nojekyll` désactive Jekyll pour servir les assets tels quels.
+Les sources sont dans le dossier [`docs/`](docs/index.html). Hébergement via GitHub Pages (branche `main`, dossier `/docs`). Le fichier `docs/.nojekyll` désactive Jekyll pour servir les assets tels quels.
 
 ---
 
@@ -225,6 +221,7 @@ Merci de respecter le style existant et de limiter la portée des PRs.
 
 **sergelacime**
 
+- Site : [sergelacime.github.io/cpress/docs/](https://sergelacime.github.io/cpress/docs/)
 - GitHub : [@sergelacime](https://github.com/sergelacime)
 - Projet : [github.com/sergelacime/cpress](https://github.com/sergelacime/cpress)
 
