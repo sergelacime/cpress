@@ -41,6 +41,21 @@ Les fichiers compressés sont créés **à côté de l'original** avec le suffix
 
 ---
 
+## Site web (GitHub Pages)
+
+Une page de présentation est disponible dans le dossier [`docs/`](docs/index.html).
+
+Pour l'activer sur GitHub :
+
+1. **Settings** → **Pages**
+2. **Source** : *Deploy from a branch*
+3. **Branch** : `main` (ou `master`) → dossier **`/docs`**
+4. Enregistrer — le site sera accessible à `https://sergelacime.github.io/cpress/`
+
+Le fichier `docs/.nojekyll` désactive Jekyll pour servir les assets tels quels.
+
+---
+
 ## Captures d'écran
 
 <!-- Remplacez par vos captures une fois le dépôt publié -->

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="cPress — Application desktop open source de compression locale de fichiers : images, documents, PDF, audio et vidéo. Vos données restent sur votre machine."
+    />
+    <meta name="author" content="sergelacime" />
+    <meta name="copyright" content="Copyright © 2026 sergelacime" />
+    <meta property="og:title" content="cPress — Compression de fichiers locale" />
+    <meta
+      property="og:description"
+      content="Compressez images, PDF, documents Office, audio et vidéo en local. Open source, Tauri + Rust."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo-header.png" />
+    <meta name="theme-color" content="#0f1117" />
+    <title>cPress — Compression locale de fichiers</title>
+    <link rel="icon" type="image/png" href="assets/logo-header.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="nav-brand" href="#">
+          <img src="assets/logo-header.png" alt="cPress" width="36" height="36" />
+          cPress
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+          <li><a href="#formats">Formats</a></li>
+          <li><a href="#utilisation">Utilisation</a></li>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="https://github.com/sergelacime/cpress/blob/main/README.md">Documentation</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="theme-btn" id="theme-toggle" type="button" aria-label="Changer de thème">
+            ◐
+          </button>
+          <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Menu">☰</button>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container">
+        <img
+          class="hero-logo"
+          src="assets/logo-header.png"
+          alt="Logo cPress"
+          width="96"
+          height="96"
+        />
+        <h1>Compressez vos fichiers<br /><span>sans les envoyer en ligne</span></h1>
+        <p class="hero-tagline">
+          cPress est une application desktop open source qui réduit la taille de vos images,
+          documents, PDF, audio et vidéo — entièrement en local, sur votre machine.
+        </p>
+        <div class="hero-badges">
+          <span class="badge">Open source · MIT</span>
+          <span class="badge">Tauri 2 + Rust</span>
+          <span class="badge">macOS · Windows · Linux</span>
+          <span class="badge">100 % local</span>
+        </div>
+        <div class="hero-cta">
+          <a
+            class="btn btn-primary"
+            href="https://github.com/sergelacime/cpress/releases"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ↓ Télécharger
+          </a>
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/sergelacime/cpress"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Voir sur GitHub
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section id="fonctionnalites">
+      <div class="container">
+        <h2 class="section-title">Fonctionnalités</h2>
+        <p class="section-subtitle">
+          Une interface simple et efficace pour compresser vos fichiers au quotidien, sans
+          compromettre votre vie privée.
+        </p>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Compression 100 % locale</h3>
+            <p>
+              Aucune donnée n'est envoyée sur Internet. Tout le traitement se fait sur votre
+              ordinateur, hors ligne.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">📂</div>
+            <h3>Glisser-déposer</h3>
+            <p>
+              Déposez vos fichiers ou sélectionnez-les en lot. Traitez plusieurs fichiers
+              d'un coup avec suivi de progression.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🎚️</div>
+            <h3>Curseur de qualité</h3>
+            <p>
+              Ajustez le compromis taille / fidélité de 1 à 100 selon vos besoins — web,
+              archivage ou impression.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">👁️</div>
+            <h3>Aperçu intégré</h3>
+            <p>
+              Prévisualisez images, vidéos, audio, PDF et documents avant et après
+              compression, côte à côte.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3>Historique persistant</h3>
+            <p>
+              Retrouvez vos dernières compressions avec les économies réalisées, enregistrées
+              localement en JSON.
+            </p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon">🌓</div>
+            <h3>Thème clair &amp; sombre</h3>
+            <p>
+              Interface adaptée à votre environnement de travail, avec bascule instantanée entre
+              les deux modes.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="formats">
+      <div class="container">
+        <h2 class="section-title">Formats pris en charge</h2>
+        <p class="section-subtitle">
+          Détection automatique du type de fichier et moteur de compression adapté à chaque
+          catégorie.
+        </p>
+        <div class="formats-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Catégorie</th>
+                <th>Formats</th>
+                <th>Moteur</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Images</strong></td>
+                <td>JPEG, PNG, WebP</td>
+                <td><code>image</code>, <code>oxipng</code> (Rust)</td>
+              </tr>
+              <tr>
+                <td><strong>Documents Office</strong></td>
+                <td>DOCX, XLSX, PPTX, ODT, ODS, ODP</td>
+                <td>Recompression ZIP + images internes</td>
+              </tr>
+              <tr>
+                <td><strong>Archives</strong></td>
+                <td>ZIP</td>
+                <td>Optimisation des entrées</td>
+              </tr>
+              <tr>
+                <td><strong>PDF</strong></td>
+                <td>PDF</td>
+                <td><code>qpdf</code> (optionnel) ou <code>lopdf</code></td>
+              </tr>
+              <tr>
+                <td><strong>Vidéo</strong></td>
+                <td>MP4, MOV, MKV…</td>
+                <td>FFmpeg (sidecar embarqué)</td>
+              </tr>
+              <tr>
+                <td><strong>Audio</strong></td>
+                <td>MP3, WAV…</td>
+                <td>FFmpeg (sidecar embarqué)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-subtitle" style="margin-top: 1.5rem; margin-bottom: 0">
+          Les fichiers compressés sont créés à côté de l'original avec le suffixe
+          <code>_compressed</code> (ex.&nbsp;: <code>photo.jpg</code> →
+          <code>photo_compressed.jpg</code>).
+        </p>
+      </div>
+    </section>
+
+    <section id="utilisation">
+      <div class="container">
+        <h2 class="section-title">Comment ça marche</h2>
+        <p class="section-subtitle">
+          Quatre étapes simples pour réduire la taille de vos fichiers sans quitter votre
+          bureau.
+        </p>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3>Ajoutez vos fichiers</h3>
+            <p>Glissez-déposez ou choisissez un ou plusieurs fichiers depuis l'explorateur.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3>Réglez la qualité</h3>
+            <p>Utilisez le curseur pour définir le niveau de compression souhaité.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3>Lancez la compression</h3>
+            <p>Suivez la progression en temps réel. Chaque type de fichier est traité par le moteur adapté.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <h3>Récupérez le résultat</h3>
+            <p>Ouvrez le fichier compressé dans le Finder ou comparez-le dans l'aperçu intégré.</p>
+          </div>
+        </div>
+
+        <div class="mock-ui" aria-hidden="true">
+          <div class="mock-titlebar">
+            <span class="mock-dot"></span>
+            <span class="mock-dot"></span>
+            <span class="mock-dot"></span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-panel">
+              <h4>File d'attente</h4>
+              <div class="mock-job done">photo_vacances.jpg · −42 %</div>
+              <div class="mock-job">
+                presentation.pdf
+                <div class="mock-progress"><span></span></div>
+              </div>
+              <div class="mock-job">archive.zip · en attente</div>
+            </div>
+            <div class="mock-panel">
+              <h4>Aperçu</h4>
+              <div class="mock-preview">
+                <span class="mock-preview-icon">🖼️</span>
+                <span>photo_vacances_compressed.jpg</span>
+                <span>2,1 Mo → 1,2 Mo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="privacy-banner">
+          <h3>Vos fichiers ne quittent jamais votre machine</h3>
+          <p>
+            Contrairement aux services en ligne, cPress ne télécharge rien vers un serveur.
+            Idéal pour documents sensibles, archives professionnelles et usage hors connexion.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Technologies</h2>
+        <p class="section-subtitle">
+          Construit avec des outils modernes pour des performances natives et une empreinte
+          mémoire réduite.
+        </p>
+        <div class="tech-grid">
+          <span class="tech-pill">Tauri 2</span>
+          <span class="tech-pill">Rust</span>
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">Vite</span>
+          <span class="tech-pill">FFmpeg</span>
+          <span class="tech-pill">oxipng</span>
+          <span class="tech-pill">lopdf</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="installation">
+      <div class="container">
+        <h2 class="section-title">Installation</h2>
+        <p class="section-subtitle">
+          Téléchargez la dernière release pour votre système, ou compilez depuis les sources.
+        </p>
+        <div class="install-block">
+          <p><strong>Depuis les sources (développeurs)</strong></p>
+          <pre><code>git clone https://github.com/sergelacime/cpress.git
+cd cpress
+pnpm install
+pnpm tauri dev</code></pre>
+          <p class="install-note">
+            Prérequis : Node.js 18+, pnpm, Rust stable. Pour un installeur de production :
+            <code>pnpm tauri build</code> (FFmpeg est téléchargé automatiquement).
+          </p>
+          <p style="margin-top: 1.25rem">
+            <a
+              href="https://github.com/sergelacime/cpress/releases"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              → Voir les releases et binaires précompilés
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <nav class="footer-links">
+          <a href="https://github.com/sergelacime/cpress" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://github.com/sergelacime/cpress/releases" target="_blank" rel="noopener noreferrer">Releases</a>
+          <a href="https://github.com/sergelacime/cpress/blob/main/LICENSE" target="_blank" rel="noopener noreferrer">Licence MIT</a>
+          <a href="https://github.com/sergelacime/cpress/blob/main/README.md" target="_blank" rel="noopener noreferrer">README</a>
+          <a href="https://github.com/sergelacime" target="_blank" rel="noopener noreferrer">@sergelacime</a>
+        </nav>
+        <p class="footer-copy">© 2026 sergelacime — cPress · Distribué sous licence MIT</p>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var stored = localStorage.getItem("cpress-site-theme");
+        if (stored === "light" || stored === "dark") {
+          root.setAttribute("data-theme", stored);
+        } else if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+          root.setAttribute("data-theme", "light");
+        } else {
+          root.setAttribute("data-theme", "dark");
+        }
+
+        document.getElementById("theme-toggle").addEventListener("click", function () {
+          var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+          root.setAttribute("data-theme", next);
+          localStorage.setItem("cpress-site-theme", next);
+        });
+
+        document.getElementById("menu-toggle").addEventListener("click", function () {
+          document.getElementById("nav-links").classList.toggle("open");
+        });
+      })();
+    </script>
+  </body>
+</html>
