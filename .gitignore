@@ -1,0 +1,79 @@
+# --- Dépendances ---
+node_modules/
+
+# --- Build frontend (Vite) ---
+dist/
+dist-ssr/
+*.local
+
+# --- Rust / Tauri ---
+src-tauri/target/
+
+# Schémas Tauri générés (auto-complétion capabilities)
+src-tauri/gen/schemas/
+
+# Cache outils bundler Tauri (Wix, NSIS, create-dmg…)
+src-tauri/target/.tauri/
+
+# --- Sidecars (FFmpeg, qpdf — téléchargés au build, ~50 Mo) ---
+src-tauri/binaries/*
+!src-tauri/binaries/.gitkeep
+!src-tauri/binaries/.gitignore
+
+# --- Variables d'environnement ---
+.env
+.env.*
+!.env.example
+
+# --- Logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Tests & couverture ---
+coverage/
+.nyc_output/
+
+# --- OS ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# --- Éditeurs & IDE ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json.example
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Fichiers temporaires ---
+*.tmp
+*.temp
+*.bak
+*.orig
+*.rej
+*~
+
+# --- Artefacts de build copiés hors target (release locale) ---
+*.dmg
+*.msi
+*.app/
+*.deb
+*.AppImage
+*.exe
+!src-tauri/icons/**/*.exe
