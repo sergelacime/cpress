@@ -2,7 +2,7 @@
 
 Application desktop **open source** de compression de fichiers, entièrement locale — vos données ne quittent jamais votre machine.
 
-**Site web :** [sergelacime.github.io/cpress/docs/](https://sergelacime.github.io/cpress/docs/)
+**Site web :** [sergelacime.github.io/cpress/](https://sergelacime.github.io/cpress/)
 
 Développée avec **Tauri 2**, **React** et **Rust** par [sergelacime](https://github.com/sergelacime).
 
@@ -46,7 +46,7 @@ Les fichiers compressés sont créés **à côté de l'original** avec le suffix
 
 ## Site web
 
-Page de présentation en ligne : **[https://sergelacime.github.io/cpress/docs/](https://sergelacime.github.io/cpress/docs/)**
+Page de présentation en ligne : **[https://sergelacime.github.io/cpress/](https://sergelacime.github.io/cpress/)**
 
 Les sources sont dans le dossier [`docs/`](docs/index.html). Hébergement via GitHub Pages (branche `main`, dossier `/docs`). Le fichier `docs/.nojekyll` désactive Jekyll pour servir les assets tels quels.
 
@@ -221,7 +221,7 @@ Merci de respecter le style existant et de limiter la portée des PRs.
 
 **sergelacime**
 
-- Site : [sergelacime.github.io/cpress/docs/](https://sergelacime.github.io/cpress/docs/)
+- Site : [sergelacime.github.io/cpress/](https://sergelacime.github.io/cpress/)
 - GitHub : [@sergelacime](https://github.com/sergelacime)
 - Projet : [github.com/sergelacime/cpress](https://github.com/sergelacime/cpress)
 
